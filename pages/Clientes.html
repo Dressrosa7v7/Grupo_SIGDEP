@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Personas</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="formulario">
+    <h2 class="formulario__titulo">Registro de Personas</h2>
+    <form id="personForm" class="formulario__form">
+      <div class="formulario__grupo">
+        <label for="id" class="formulario__label">Cédula</label>
+        <input type="text" id="id" class="formulario__input" required>
+      </div>
+      <div class="formulario__grupo">
+        <label for="firstName" class="formulario__label">Primer Nombre</label>
+        <input type="text" id="firstName" class="formulario__input" required>
+      </div>
+      <div class="formulario__grupo">
+        <label for="secondName" class="formulario__label">Segundo Nombre</label>
+        <input type="text" id="secondName" class="formulario__input">
+      </div>
+      <div class="formulario__grupo">
+        <label for="firstLastName" class="formulario__label">Primer Apellido</label>
+        <input type="text" id="firstLastName" class="formulario__input" required>
+      </div>
+      <div class="formulario__grupo">
+        <label for="secondLastName" class="formulario__label">Segundo Apellido</label>
+        <input type="text" id="secondLastName" class="formulario__input">
+      </div>
+      <div class="formulario__grupo">
+        <label for="gender" class="formulario__label">Sexo</label>
+        <select id="gender" class="formulario__input" required>
+          <option value="">Seleccione</option>
+          <option value="M">M</option>
+          <option value="F">F</option>
+        </select>
+      </div>
+      <div class="formulario__grupo">
+        <label for="age" class="formulario__label">Edad</label>
+        <input type="number" id="age" class="formulario__input" required min="0">
+      </div>
+      <div class="formulario__grupo">
+        <label for="phone" class="formulario__label">Teléfono</label>
+        <input type="text" id="phone" class="formulario__input" required>
+      </div>
+      <div class="formulario__grupo">
+        <label for="email" class="formulario__label">Correo</label>
+        <input type="email" id="email" class="formulario__input" required>
+      </div>
+      <button type="submit" class="formulario__boton">Guardar Persona</button>
+    </form>
+
+    <table class="tabla">
+      <thead class="tabla__encabezado">
+        <tr>
+          <th>Cédula</th>
+          <th>Primer Nombre</th>
+          <th>Segundo Nombre</th>
+          <th>Primer Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Sexo</th>
+          <th>Edad</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+          <th colspan="2">Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="personList" class="tabla__cuerpo"></tbody>
+    </table>
+  </div>
+  <script src="../js/clientes.js"></script>
+</body>
+</html>

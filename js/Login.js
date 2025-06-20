@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mostrarMensaje("Inicio de sesión exitoso", "success");
         setTimeout(() => {
           localStorage.setItem("usuarioActual", user);
-          window.location.href = "../pages/AddUser.html"; // Redirige al menu principal
+          window.location.href = "../Sistema_prestamos/pages/mainmenu.html"; // Redirige al menu principal
         }, 1500);
       } else {
         mostrarMensaje("Usuario o contraseña incorrectos.");
