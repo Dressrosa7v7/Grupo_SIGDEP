@@ -1,93 +1,211 @@
-*{
-    padding: 0%;
-    margin: 0%;
-    font-family:Arial, Helvetica, sans-serif
+/* ===========================
+   Estilos de Warrent - Inicio
+   =========================== */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: rgb(73,171,105);
-    justify-self: center;
-    padding: 100px;
+body {
+  background-color: rgb(73,171,105);
+  justify-self: center;
+  padding: 100px;
 }
 
-.BlockLogin{
-    background-color: white;
-    border-radius: 8px;
-    border: 0.2px solid black;
-    padding: 10px;
+.BlockLogin {
+  background-color: white;
+  border-radius: 8px;
+  border: 0.2px solid black;
+  padding: 10px;
 }
 
-.BlockLogin__img{
-    justify-self: center;
-    padding: 10px;
+.BlockLogin__img {
+  justify-self: center;
+  padding: 10px;
 }
 
-.BlockLogin__Btn{
-    justify-self: center;
-    padding: 20px
+.BlockLogin__Btn {
+  justify-self: center;
+  padding: 20px;
 }
 
-.BlockLogin__Btn--ver{
-    justify-self: center;
-    padding: 10px;
-    border-radius: 50px;
-    border: 0;
-    background-color: #000000 0 0 8px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 15px;
-    transition: all .5s ease;
+.BlockLogin__Btn--ver {
+  justify-self: center;
+  padding: 10px;
+  border-radius: 50px;
+  border: 0;
+  background-color: #000000 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
 }
 
-.BlockLogin__Btn--ver:hover{
-    letter-spacing: 3px;
-    background-color: rgb(73,171,105);
-    color: white;
-    box-shadow: rgb(73,171,105) 0px 7px 29px 0px;
+.BlockLogin__Btn--ver:hover {
+  letter-spacing: 3px;
+  background-color: rgb(73,171,105);
+  color: white;
+  box-shadow: rgb(73,171,105) 0px 7px 29px 0px;
 }
 
-.BlockLogin__Btn--ver:active{
-    letter-spacing: 3px;
-    background-color: rgb(73,171,105);
-    color: white;
-    box-shadow: rgb(73,171,105) 0px 0px 0px 0px;
-    transform: translateY(10px);
-    transition: 100ms;
+.BlockLogin__Btn--ver:active {
+  letter-spacing: 3px;
+  background-color: rgb(73,171,105);
+  color: white;
+  box-shadow: rgb(73,171,105) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
 }
 
-::-webkit-input-placeholder{
-    color: #020000;
+::-webkit-input-placeholder {
+  color: #020000;
 }
 
 .BlockLogin__inp {
-    position: relative;
-    justify-self: center;
-    padding-bottom: 5px;
-    border-bottom: 2px solid black;
-    width: 100%;
-    max-width: 300px; /* Ajustalo warrent para que sea responsivo */
-    box-sizing: border-box;
-    padding: 10px;
+  position: relative;
+  justify-self: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+  width: 100%;
+  max-width: 300px; /* Ajustalo warrent para que sea responsivo */
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .BlockLogin__img--int {
-    border: none;
-    outline: none;
-    background-color: rgb(73,171,105);
-    background: none;
-    width: 100%;
-    font-size: 17px;
-    color: rgb(0, 0, 0);
-    padding-right: 30px;
-    text-align: left;
-    box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-color: rgb(73,171,105);
+  background: none;
+  width: 100%;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  padding-right: 30px;
+  text-align: left;
+  box-sizing: border-box;
 }
 
 .BlockLogin__inp i {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    color: #000000;
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #000000;
+  pointer-events: none;
 }
+
+/* ===========================
+   Estilos de Warrent - Fin
+   =========================== */
+
+
+/* ===========================
+   Estilos de Elias - Inicio
+   =========================== */
+
+.main-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px auto;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 6px 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.main-search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 8px 12px;
+  border-radius: 24px 0 0 24px;
+  color: #222;
+}
+
+.main-search-input::placeholder {
+  color: #888;
+}
+
+.main-search-btn {
+  border: none;
+  background: #26A646;
+  color: #fff;
+  font-size: 1.3em;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 0 24px 24px 0;
+  transition: background 0.3s ease;
+}
+
+.main-search-btn:hover {
+  background: #1f7a38;
+}
+
+.main-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  z-index: 10;
+}
+
+.icon-btn {
+  position: relative;
+  font-size: 1.8em;
+  color: #0D2F73;
+  cursor: pointer;
+  background: #f4f4f4;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.icon-btn:hover {
+  background: #e6f4ea;
+}
+
+.icon-btn .badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #d8000c;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0 5px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  box-shadow: 0 1px 4px #0002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn.profile {
+  background: #26A646;
+  color: #fff;
+  font-size: 2em;
+}
+
+.icon-btn.profile:hover {
+  background: #1f7a38;
+}
+
+/* ===========================
+   Estilos de Elias - Fin
+   =========================== */

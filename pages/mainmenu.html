@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIGDEP - Sistema de Gestión de Préstamos</title>
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Botón menú hamburguesa -->
+  <button id="btn-menu" class="btn-menu" aria-label="Mostrar menú">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- Menú lateral -->
+  <nav class="sidebar">
+    <a href="./mainmenu.html" class="menu-brand"><i class="bx bxs-bank"></i> SIGDEP</a>
+    <ul class="modulos-lista">
+      <li class="menu-section">
+        <button class="section-btn">
+          <i class="bx bxs-user-circle"></i> Administración de perfiles
+          <i class="bx bx-chevron-down arrow"></i>
+        </button>
+        <ul class="submenu">
+          <li><a href="./usuarios.html"><i class="bx bxs-user"></i> Módulo de Usuario</a></li>
+          <li><a href="./clientes.html"><i class="bx bxs-user"></i> Módulo de Cliente</a></li>
+          <li><a href="./prestamistas.html"><i class="bx bxs-user-account"></i> Módulo de Prestamista</a></li>
+        </ul>
+      </li>
+      <li class="menu-section">
+        <button class="section-btn">
+          <i class="bx bxs-wallet-alt"></i> Operaciones financieras
+          <i class="bx bx-chevron-down arrow"></i>
+        </button>
+        <ul class="submenu">
+          <li><a href="./prestamos.html"><i class="bx bxs-wallet"></i> Módulo de Préstamos</a></li>
+          <li><a href="./pagos.html"><i class="bx bxs-credit-card"></i> Módulo de Pagos</a></li>
+        </ul>
+      </li>
+      <li class="menu-section">
+        <button class="section-btn">
+          <i class="bx bxs-report"></i> Reporte
+          <i class="bx bx-chevron-down arrow"></i>
+        </button>
+        <ul class="submenu">
+          <li><a href="./alertas.html"><i class="bx bxs-bell-ring"></i> Módulo de Alertas</a></li>
+          <li><a href="./reportes.html"><i class="bx bxs-dashboard"></i> Módulo de Reportes</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <section id="content">
+    <!-- Barra de búsqueda centrada arriba -->
+    <form class="main-search" action="#" method="get" autocomplete="off">
+      <input type="text" class="main-search-input" placeholder="Buscar..." name="q" />
+      <button type="submit" class="main-search-btn" aria-label="Buscar">
+        <i class="bx bx-search"></i>
+      </button>
+    </form>
+
+    <!-- Iconos de notificaciones, mensajes y perfil -->
+    <div class="main-icons">
+      <div class="icon-btn">
+        <i class="bx bx-bell"></i>
+        <span class="badge">15</span>
+      </div>
+      <div class="icon-btn">
+        <i class="bx bx-envelope"></i>
+        <span class="badge">8</span>
+      </div>
+      <div class="icon-btn profile">
+        <i class="bx bx-user-circle"></i>
+      </div>
+    </div>
+
+    <main>
+      <h1 class="main-title">
+        <img src="img/logo-sigdep.png" alt="Logo SIGDEP" class="logo-sigdep" width="48" height="48" />
+        Bienvenido a SIGDEP
+      </h1>
+      <p>Selecciona un módulo del menú lateral para comenzar.</p>
+    </main>
+  </section>
+
+  <script src="scriptmm.js"></script>
+</body>
+</html>
