@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Gestión de Préstamos - Login</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="https://kit.fontawesome.com/512022b1a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="BlockLogin">
+    <div class="BlockLogin__img">
+      <img src="../img/WhatsApp Image 2025-04-28 at 10.41.34 PM.png" width="200" height="200" alt="Imagen del login" />
+    </div>
+    <form id="loginForm" action="#" method="POST">
+      <div class="BlockLogin__inp">
+        <input type="email" class="BlockLogin__img--int" id="CorreoE" name="Correo" placeholder="Ingrese su correo" required />
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="BlockLogin__inp">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" class="BlockLogin__img--int" id="Contra1" name="Contra1" placeholder="Ingrese su contraseña" required />
+      </div>
+      <div class="BlockLogin__inp">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" class="BlockLogin__img--int" id="Contra2" name="Contra2" placeholder="Confirme su contraseña" required />
+      </div>
+      <div class="BlockLogin__Btn">
+        <button type="submit" class="BlockLogin__Btn--ver">Entrar</button>
+        <button type="button" class="BlockLogin__Btn--ver" onclick="alert('Para ayuda, contacte al administrador.')">Ayuda</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      const pass1 = document.getElementById('Contra1').value;
+      const pass2 = document.getElementById('Contra2').value;
+      if (pass1 !== pass2) {
+        e.preventDefault();
+        alert('Las contraseñas no coinciden.');
+      }
+    });
+  </script>
+</body>
+</html>

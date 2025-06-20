@@ -1,90 +1,86 @@
-/* ===========================
-   Estilos de Warrent - Inicio
-   =========================== */
-
 * {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgb(73,171,105);
-  justify-self: center;
-  padding: 100px;
+  min-height: 100vh;
 }
 
+/* Login */
 .BlockLogin {
   background-color: white;
   border-radius: 8px;
   border: 0.2px solid black;
-  padding: 10px;
+  padding: 20px 30px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin: 40px auto;
+  position: relative;
 }
 
 .BlockLogin__img {
-  justify-self: center;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 20px 0;
 }
 
 .BlockLogin__Btn {
-  justify-self: center;
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
 }
 
 .BlockLogin__Btn--ver {
-  justify-self: center;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 50px;
-  border: 0;
-  background-color: #000000 0 0 8px;
+  border: none;
+  background-color: #000;
+  color: white;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 15px;
+  cursor: pointer;
   transition: all 0.5s ease;
+  box-shadow: 0 0 8px #00000033;
 }
 
 .BlockLogin__Btn--ver:hover {
   letter-spacing: 3px;
   background-color: rgb(73,171,105);
-  color: white;
   box-shadow: rgb(73,171,105) 0px 7px 29px 0px;
 }
 
 .BlockLogin__Btn--ver:active {
   letter-spacing: 3px;
   background-color: rgb(73,171,105);
-  color: white;
-  box-shadow: rgb(73,171,105) 0px 0px 0px 0px;
-  transform: translateY(10px);
+  box-shadow: none;
+  transform: translateY(4px);
   transition: 100ms;
-}
-
-::-webkit-input-placeholder {
-  color: #020000;
 }
 
 .BlockLogin__inp {
   position: relative;
-  justify-self: center;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-bottom: 2px solid black;
   width: 100%;
-  max-width: 300px; /* Ajustalo warrent para que sea responsivo */
-  box-sizing: border-box;
-  padding: 10px;
+  max-width: 300px;
+  margin-bottom: 20px;
 }
 
 .BlockLogin__img--int {
   border: none;
   outline: none;
-  background-color: rgb(73,171,105);
   background: none;
   width: 100%;
   font-size: 17px;
   color: rgb(0, 0, 0);
   padding-right: 30px;
   text-align: left;
-  box-sizing: border-box;
 }
 
 .BlockLogin__inp i {
@@ -92,19 +88,135 @@ body {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  color: #000000;
+  color: #000;
   pointer-events: none;
 }
 
-/* ===========================
-   Estilos de Warrent - Fin
-   =========================== */
+/* Menú lateral */
+.sidebar {
+  width: 250px;
+  background-color: #0D2F73;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
 
+.sidebar.mostrar {
+  transform: translateX(0);
+}
 
-/* ===========================
-   Estilos de Elias - Inicio
-   =========================== */
+.sidebar:not(.mostrar) {
+  transform: translateX(-100%);
+}
 
+.menu-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.modulos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-section {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.section-btn {
+  background: none;
+  border: none;
+  color: white;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-btn .arrow {
+  transition: transform 0.3s ease;
+}
+
+.menu-section.open .arrow {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.menu-section.open .submenu {
+  max-height: 500px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover,
+.submenu li a.active {
+  background-color: rgb(73,171,105);
+  border-radius: 4px;
+}
+
+#content {
+  margin-left: 250px;
+  padding: 2rem;
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Botón menú hamburguesa */
+.btn-menu {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 25px;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #0D2F73;
+  border-radius: 2px;
+}
+
+/* Barra de búsqueda */
 .main-search {
   display: flex;
   align-items: center;
@@ -206,6 +318,41 @@ body {
   background: #1f7a38;
 }
 
-/* ===========================
-   Estilos de Elias - Fin
-   =========================== */
+/* Responsividad */
+@media (max-width: 900px) {
+  #content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    width: 200px;
+    height: 100vh;
+  }
+
+  .sidebar.mostrar {
+    transform: translateX(0);
+  }
+
+  #content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .btn-menu {
+    display: flex;
+  }
+
+  .main-icons {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+}

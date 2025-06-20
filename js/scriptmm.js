@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".submenu li a");
 
   // Mostrar/ocultar menú lateral en móvil y animar botón
-  btnMenu.addEventListener("click", () => {
-    sidebar.classList.toggle("mostrar");
-    btnMenu.classList.toggle("active");
-  });
+  if (btnMenu && sidebar) {
+    btnMenu.addEventListener("click", () => {
+      sidebar.classList.toggle("mostrar");
+      btnMenu.classList.toggle("active");
+    });
+  }
 
   // Desplegar/ocultar secciones del menú
   sectionButtons.forEach((btn) => {
@@ -37,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const query = mainSearchForm.q.value.trim();
       if (query) {
         alert("Buscaste: " + query);
-        // Aquí puedes agregar la lógica real de búsqueda
       }
     });
   }
