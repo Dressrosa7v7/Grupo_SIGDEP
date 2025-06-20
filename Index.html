@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestion de prestamo</title>
+    <link rel="Stylesheet" href="../Sistema_prestamos/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login.html -->
+<div class="auth-wrapper">
+  <div class="auth">
+    <!-- Panel izquierdo -->
+    <div class="auth__panel auth__panel--left">
+      <img class="auth__logo" src="../Sistema_prestamos/img/WhatsApp Image 2025-04-28 at 10.41.34 PM.jpeg" alt="LOGO">
+      <h1 class="auth__title">¡Bienvenidos!</h1>
+      <p class="auth__description">Sistema de gestión de préstamos SIGDEP</p>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="auth__panel auth__panel--right">
+      <form class="auth__form" id="Login" autocomplete="on">
+        <div id="mensaje" class="auth__mensaje"></div>
+        <h1 class="auth__form-title">Inicia Sesión</h1>
+
+        <div class="auth__input-group">
+          <i class="auth__icon fas fa-user"></i>
+          <input class="auth__input" type="text" id="userLogin" placeholder="Nombre de usuario" required>
+        </div>
+
+        <div class="auth__input-group">
+          <i class="auth__icon fas fa-lock"></i>
+          <input class="auth__input" type="password" id="passwordLogin" placeholder="Contraseña" required minlength="8">
+        </div>
+
+        <button type="submit" class="auth__button">Iniciar sesión</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../Sistema_prestamos/js/Login.js"></script>
+
+</body>
+</html>

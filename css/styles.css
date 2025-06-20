@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 body {
   background-color: rgb(73,171,105);
   min-height: 100vh;
@@ -356,3 +357,194 @@ body {
     right: 15px;
   }
 }
+=======
+body{
+    background-color: rgb(73,171,105);
+    justify-self: center;
+}
+/*       Creacion login    */
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color: rgb(73,171,105); 
+}
+
+.auth {
+  display: flex;
+  width: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.auth__panel {
+  padding: 20px;
+  width: 50%;
+}
+
+.auth__panel--left {
+  background-color: rgb(73,171,105);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  border-radius: 2 solid black;
+}
+
+.auth__panel--right {
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.auth__logo {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.auth__title,
+.auth__form-title {
+  color: #000000;
+  text-align: center;
+  
+  
+}
+
+.auth__description {
+  margin-top: 10px;
+  color:#000000}
+
+.auth__input-group {
+  position: relative;
+  margin-top: 10px;
+}
+
+.auth__icon {
+  position: absolute;
+  top: 55%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #00796b;
+}
+
+.auth__input {
+  width: 80%;
+  padding: 10px 10px 10px 35px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.aut__contrasena{
+  text-align: center;
+  color: #00796b;
+}
+
+.auth__error {
+  color: red;
+  margin-top: 10px;
+  display: none;
+  text-align: center
+}
+
+.auth__button {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth__button:hover {
+  background-color: #004d40;
+}
+
+.auth__link:hover {
+  text-decoration: underline;
+}
+
+/*Para responsivo a movil etc...*/
+@media (max-width: 768px) {
+  .auth {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .auth__panel {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .auth__panel--left {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
+
+  .auth__panel--right {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .auth__form {
+    width: 100%;
+    align-items: center;
+  }
+
+  .auth__input,
+  .auth__button {
+    width: 90%;
+  }
+
+  .auth__mensaje {
+    width: 90%;
+    margin: 10px auto 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth__input {
+    width: 85%;
+    font-size: 14px;
+  }
+
+  .auth__button {
+    width: 70%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .auth__title,
+  .auth__form-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .auth__logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .aut__contrasena {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .auth__mensaje {
+    font-size: 13px;
+  }
+}
+>>>>>>> 8046c5f (Warrent: Login Arreglado)

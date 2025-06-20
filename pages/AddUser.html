@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema De Gestiion de Prestamos</title>
+    <link rel="Stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Registro.html -->
+<div class="auth-wrapper">
+  <div class="auth">
+    <div class="auth__panel auth__panel--left">
+      <img class="auth__logo" src="../Sistema_prestamos/img/WhatsApp Image 2025-04-28 at 10.41.34 PM.jpeg" alt="LOGO">
+      <h1 class="auth__title">¡Nuevas Credenciales!</h1>
+      <p class="auth__description">No olvidar enviar las Credenciales</p>
+    </div>
+
+    <div class="auth__panel auth__panel--right">
+      <form class="auth__form" id="LoginFrm" autocomplete="on">
+        <div id="mensaje" class="auth__mensaje"></div>
+        <h1 class="auth__form-title">Crea una cuenta</h1>
+
+        <div class="auth__input-group">
+          <i class="auth__icon fas fa-user"></i>
+          <input class="auth__input" type="text" id="userRegistroL" placeholder="Nombre de usuario" required>
+        </div>
+
+        <div class="auth__input-group">
+          <i class="auth__icon fas fa-lock"></i>
+          <input class="auth__input" type="password" id="passwordRegistroL" placeholder="Contraseña" required minlength="8">
+        </div>
+
+        <div class="auth__input-group">
+          <i class="auth__icon fas fa-lock"></i>
+          <input class="auth__input" type="password" id="confirmRegistroL" placeholder="Confirmar Contraseña" required minlength="8">
+        </div>
+
+        <button type="submit" class="auth__button">Nuevo Usuario</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../js/Login.js"></script>
+
+</body>
+</html>
